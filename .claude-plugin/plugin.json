@@ -1,0 +1,39 @@
+{
+  "name": "thegram-api",
+  "displayName": "Thegram (API key)",
+  "version": "4.7.4",
+  "description": "Connect Claude Code to Thegram with a scoped API key. Search, read and cite linked goals, decisions, requirements, evidence and sources in Thegram vaults and GramHub data, and save typed records only when you ask.",
+  "author": {
+    "name": "Roy Kim",
+    "url": "https://thegram.one"
+  },
+  "icon": "./assets/logo.png",
+  "documentationUrl": "https://docs.thegram.one",
+  "supportUrl": "https://github.com/thegram-one/thegram-plugin-api/issues",
+  "privacyPolicyUrl": "https://vault.thegram.one/legal/privacy",
+  "termsOfServiceUrl": "https://vault.thegram.one/legal/terms",
+  "homepage": "https://thegram.one",
+  "repository": "https://github.com/thegram-one/thegram-plugin-api",
+  "license": "Apache-2.0",
+  "keywords": [
+    "thegram",
+    "knowledge-base",
+    "api-key",
+    "coding-agent",
+    "decisions",
+    "records",
+    "sources",
+    "history",
+    "gramhub",
+    "mcp"
+  ],
+  "userConfig": {
+    "api_key": {
+      "type": "string",
+      "title": "Thegram API key",
+      "description": "A scoped key from Settings > Agents > API keys at https://vault.thegram.one/. Claude Code keeps it in your system credential store.",
+      "required": true,
+      "sensitive": true
+    }
+  }
+}

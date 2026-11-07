@@ -1,0 +1,15 @@
+{
+	"name": "thegram-api",
+	"owner": {
+		"name": "thegram-one"
+	},
+	"description": "Thegram for coding agents that sign in with a scoped API key: Claude Code reads and cites linked records in Thegram and saves typed records only when you ask.",
+	"plugins": [
+		{
+			"name": "thegram-api",
+			"source": "./",
+			"version": "4.7.4",
+			"description": "Connect Claude Code to https://vault.thegram.one/mcp with a scoped API key and the Thegram memory skill. The key is asked for once and kept in the system credential store."
+		}
+	]
+}
