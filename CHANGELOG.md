@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.7.5 — 2026-11-09
+
+- Skill: a move, delete or restore takes no `request_id` and refuses one; only a create and an edit carry it. The bundled `thegram-cloud` skill is now the 4.7.5 release of the shared skill source, byte for byte (SHA256 `1164747b037d14ec829e6bd1ba39d9adbf4702ed909fa33c13dcf1babaa573e8`). Versions of the three plugins move together.
+
 ## 4.7.4 — 2026-11-07
 
 - First release of the API-key plugin as its own repository. Until 4.7.3 the API-key setup lived in the shared `thegram-one/thegram-plugin` repository as README commands; the Claude directory held that repository for a credential read from the user's environment, so the API-key path now has its own plugin and the Claude plugin carries none of it.
