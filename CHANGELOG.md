@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.8.1 — 2026-11-10
+
+- Skill: two rules changed, together with the server's instructions (the same SHA-256 on both sides). A count that comes back `unresolved` lists the words it did not read in `unread`: the skill asks again without them only when they add no condition, and otherwise says that condition cannot be counted. For a shared hub the skill gives the key words as `terms` in the language the hub is written in. The bundled `thegram-cloud` skill is the 4.8.1 release of the shared skill source, byte for byte (SHA256 `15cb91a1c997073428636039738bfc0695afa5ad4175bfcdbed12cf8348a9e80`). Versions of the three plugins move together.
+- Needs the server release of 2026-11-10 (thegram-one/thegram-vault #419, #420), which is deployed.
+
 ## 4.8.0 — 2026-11-10
 
 - Skill: rewritten as one page of 3.8 KB; it was eighteen rules in 6.5 KB. Its rules are the text the Thegram server sends as its instructions, byte for byte (`thegram-skill` and `thegram-vault` pin the same SHA-256), so an agent reads one contract whether it is given the skill, the instructions or both. The rules route a request to one tool, first match wins: remember with `vault_note` only when asked, in any language; a count with `vault_exact`; public data through `vault_ask {op:"hubs"}`; what can be read or what changed with `vault_ask`; a document with `vault_change` and `vault_add`; and anything else that may depend on what the person said with `vault_recall`, before asking the person for the missing detail. The bundled `thegram-cloud` skill is the 4.8.0 release of the shared skill source, byte for byte (SHA256 `f59415259a646cab725f453485ac50cdb217ec29bbbf91466a8e91bc0cc75b9e`). Versions of the three plugins move together.
