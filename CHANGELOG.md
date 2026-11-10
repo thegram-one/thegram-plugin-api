@@ -2,8 +2,9 @@
 
 ## 4.8.0 — 2026-11-10
 
-- Skill: rewritten as seven short rules, 3 KB instead of 6.5 KB and eighteen rules. It recalls with `vault_recall {query}` before acting and remembers with `vault_note {text}` when the person asks; the server files a note. Hubs, exact counts and document edits keep one rule each. The bundled `thegram-cloud` skill is the 4.8.0 release of the shared skill source, byte for byte (SHA256 `c9e07f4094b938fc0d898f6aca42692b49e5ea4421cfc7e3718d3dcabbc1e06a`). Versions of the three plugins move together.
-- Publish after the server release that lists `vault_recall` and `vault_note` and drops the `guide` and `feedback` ops (thegram-one/thegram-vault #416, #417).
+- Skill: rewritten as one page of 3.8 KB; it was eighteen rules in 6.5 KB. Its rules are the text the Thegram server sends as its instructions, byte for byte (`thegram-skill` and `thegram-vault` pin the same SHA-256), so an agent reads one contract whether it is given the skill, the instructions or both. The rules route a request to one tool, first match wins: remember with `vault_note` only when asked, in any language; a count with `vault_exact`; public data through `vault_ask {op:"hubs"}`; what can be read or what changed with `vault_ask`; a document with `vault_change` and `vault_add`; and anything else that may depend on what the person said with `vault_recall`, before asking the person for the missing detail. The bundled `thegram-cloud` skill is the 4.8.0 release of the shared skill source, byte for byte (SHA256 `f59415259a646cab725f453485ac50cdb217ec29bbbf91466a8e91bc0cc75b9e`). Versions of the three plugins move together.
+- The read-only check in the README now asks which vaults the key can read, which the rules send to `vault_ask {op:"browse"}`; the former question is now answered by `vault_recall`.
+- Publish after the server release that lists `vault_recall` and `vault_note`, drops the `guide` and `feedback` ops and sends these rules (thegram-one/thegram-vault #416, #417 and the unified-rules change).
 
 ## 4.7.5 — 2026-11-09
 
