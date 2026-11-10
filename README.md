@@ -1,6 +1,6 @@
 # Thegram for API-key agents
 
-Thegram is the AI knowledge base for enterprise AX: it turns scattered documents and decisions into linked goals, decisions, requirements, evidence and sources that people, Thegram AI and coding agents read as one record, with every change kept as history. This plugin connects coding agents and backend services to Thegram with a scoped API key instead of OAuth, and gives them the same memory skill: find an earlier decision, list a project's open risks, count records exactly, or save an explicitly authorized outcome as a typed record with its sources.
+Thegram is the AI knowledge base for enterprise AX: it turns scattered documents and decisions into linked goals, decisions, requirements, evidence and sources that people, Thegram AI and coding agents read as one record, with every change kept as history. This plugin connects coding agents and backend services to Thegram with a scoped API key instead of OAuth, and gives them the same memory skill: find an earlier decision, list a project's open risks, count records exactly, or remember what you tell it to keep.
 
 Use it when the host cannot complete a browser sign-in: Claude Code on a server, Codex, OpenCode, OMP, or a service that speaks MCP over HTTP. If you can sign in with your Thegram account, use the OAuth plugin for your host instead.
 
@@ -73,7 +73,7 @@ If the client has a Bearer-token field, enter just the key without a second `Bea
 Start a new agent session; installation does not change a running one. Ask:
 
 ```text
-What does Thegram know about this project? Read only: do not create or change any records.
+Which Thegram vaults can you read? Read only: do not create or change any records.
 ```
 
 The agent should call `vault_ask` with `op` `browse` and list the vaults the key reaches. If it fails, stop: do not fall back to a local app or to a different vault. HTTP 401 means the key is missing, malformed, expired or revoked; `AGENT_SCOPE_DENIED` means the key was not granted that vault. Do not create test records in real memory to prove the connection.
