@@ -8,7 +8,7 @@
 		{
 			"name": "thegram-api",
 			"source": "./",
-			"version": "4.11.0",
+			"version": "4.11.1",
 			"description": "Connect Claude Code to https://vault.thegram.one/mcp with a scoped API key and the Thegram memory skill. The key is asked for once and kept in the system credential store."
 		}
 	]
