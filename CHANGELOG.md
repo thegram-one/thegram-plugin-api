@@ -1,5 +1,10 @@
 # Changelog
 
+## 4.9.0 — 2026-11-11
+
+- Skill: the rules were rebuilt with the server's instructions (the same SHA-256 on both sides, `9a40e352…c4be80a`): counts, totals and full lists of the person's own documents go to `vault_ask {scope, plan}` with undecided records reported beside the number, `vault_exact` counts shared hubs only, and a question about the documents is a `vault_ask` find scoped to the vault meant. The bundled `thegram-cloud` skill is byte for byte the shared source. Versions of the three plugins move together.
+- Needs the server release of 2026-11-11 (thegram-one/thegram-vault #431, #433), which is deployed.
+
 ## 4.8.2 — 2026-11-10
 
 - Skill: four sentences of the rules changed, together with the server's instructions (the same SHA-256 on both sides), so that the rules ask a tool only for what its job needs and speak only of Thegram's tools; a host's connector check had reported the earlier wording as asking for information beyond the stated operation. `vault_recall` takes the few words that name what is needed, no longer the request as written, and `vault_note` what the person asked to save. The bundled `thegram-cloud` skill is byte for byte the shared source.
