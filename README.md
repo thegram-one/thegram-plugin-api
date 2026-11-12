@@ -94,3 +94,9 @@ Retrieval and drafts stay read-only. Writes stay within the approved purpose and
 - Support: https://github.com/thegram-one/thegram-plugin-api/issues
 
 License: [Apache-2.0](LICENSE). [NOTICE](NOTICE) reserves the Thegram name and logo; the Thegram service and apps are provided under their own [terms](https://vault.thegram.one/legal/terms).
+
+## Knowledge and managed work
+
+Version 4.12.0 shares the same skill as the OAuth plugins. Natural-language questions use Core conditions and source-backed Context Packs; unresolved clauses and incomplete coverage must be reported. Authorized AI-authored Decision/Risk knowledge keeps its actor, time and source without blanket human confirmation or an execution grant.
+
+Task/Event creation requires an advertised Inbox proposal capability and the person's registration. The current cloud tools expose neither, so the skill reports that limitation instead of using generic document writes or claiming a proposal was saved. This guidance does not implement the Inbox UI/API or change API-key permissions.
