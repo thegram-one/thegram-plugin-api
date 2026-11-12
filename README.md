@@ -97,6 +97,6 @@ License: [Apache-2.0](LICENSE). [NOTICE](NOTICE) reserves the Thegram name and l
 
 ## Knowledge and managed work
 
-Version 4.12.0 shares the same skill as the OAuth plugins. Natural-language questions use Core conditions and source-backed Context Packs; unresolved clauses and incomplete coverage must be reported. Authorized AI-authored Decision/Risk knowledge keeps its actor, time and source without blanket human confirmation or an execution grant.
+Version 4.13.0 shares the same skill as the OAuth plugins: the server's short instructions (under 4,000 characters), with each op's arguments in the tool schemas and the argument to fix named in every error. Authorized AI-authored Decision/Risk knowledge keeps its actor, time and source without blanket human confirmation or an execution grant.
 
 Task/Event creation requires an advertised Inbox proposal capability and the person's registration. The current cloud tools expose neither, so the skill reports that limitation instead of using generic document writes or claiming a proposal was saved. This guidance does not implement the Inbox UI/API or change API-key permissions.
