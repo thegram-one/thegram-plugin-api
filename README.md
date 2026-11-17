@@ -76,7 +76,7 @@ Start a new agent session; installation does not change a running one. Ask:
 Which Thegram vaults can you read? Read only: do not create or change any records.
 ```
 
-The agent should call `vault_ask` with `op` `browse` and list the vaults the key reaches. If it fails, stop: do not fall back to a local app or to a different vault. HTTP 401 means the key is missing, malformed, expired or revoked; `AGENT_SCOPE_DENIED` means the key was not granted that vault. Do not create test records in real memory to prove the connection.
+The agent should call `vault_read` with `refs` `["@mounts"]` and list the vaults the key reaches (its own vaults and any read-only shared vaults). If it fails, stop: do not fall back to a local app or to a different vault. HTTP 401 means the key is missing, malformed, expired or revoked; `AGENT_SCOPE_DENIED` means the key was not granted that vault. Do not create test records in real memory to prove the connection.
 
 ## 4. Revoke and rotate
 
@@ -84,7 +84,7 @@ Revoking the key in **Settings > Agents** stops server access; removing only the
 
 ## Data and permissions
 
-Memory requests go to `https://vault.thegram.one/mcp`. Requests can contain search questions, selected document and record identifiers, and content and source references the user authorizes the agent to save. The server returns the authorized vault or separately connected Drive data requested through that key. Each agent has its own access scope; manage grants and disconnect agents in **Settings > Connected agents** at https://vault.thegram.one/settings/agents.
+Memory requests go to `https://vault.thegram.one/mcp`. Requests can contain search words and query conditions, selected document and record identifiers, and content and source references the user authorizes the agent to save. The server returns the authorized vault or separately connected Drive data requested through that key. Each agent has its own access scope; manage grants and disconnect agents in **Settings > Connected agents** at https://vault.thegram.one/settings/agents.
 
 Retrieval and drafts stay read-only. Writes stay within the approved purpose and destination, and require the user's authorization. The plugin itself does not fetch Slack, Gmail or unrelated connected-app data. This plugin declares no local MCP command, lifecycle hook or script, and bundles no credential: the only secret is the key you enter, and Claude Code keeps it in the system credential store.
 
@@ -97,6 +97,6 @@ License: [Apache-2.0](LICENSE). [NOTICE](NOTICE) reserves the Thegram name and l
 
 ## Knowledge and managed work
 
-Version 4.13.0 shares the same skill as the OAuth plugins: the server's short instructions (under 4,000 characters), with each op's arguments in the tool schemas and the argument to fix named in every error. Authorized AI-authored Decision/Risk knowledge keeps its actor, time and source without blanket human confirmation or an execution grant.
+Version 5.0.0 shares the same skill as the OAuth plugins and the four tools `vault_query`, `vault_read`, `vault_add` and `vault_change` that replace the earlier seven. The skill is the server's short instructions (under 4,000 characters), with each op's arguments in the tool schemas and the argument to fix named in every error. Authorized AI-authored Decision/Risk knowledge keeps its actor, time and source without blanket human confirmation or an execution grant.
 
 Task/Event creation requires an advertised Inbox proposal capability and the person's registration. The current cloud tools expose neither, so the skill reports that limitation instead of using generic document writes or claiming a proposal was saved. This guidance does not implement the Inbox UI/API or change API-key permissions.

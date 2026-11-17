@@ -1,8 +1,8 @@
 {
   "name": "thegram-api",
   "displayName": "Thegram (API key)",
-  "version": "4.13.0",
-  "description": "Connect Claude Code to Thegram with a scoped API key. Search, read and cite linked goals, decisions, requirements, evidence and sources in Thegram vaults and GramHub data, and save typed records only when you ask.",
+  "version": "5.0.0",
+  "description": "Connect Claude Code to Thegram with a scoped API key. Query, read and cite linked goals, decisions, requirements, evidence and sources in Thegram vaults and shared GramHub vaults, and save typed records only when you ask.",
   "author": {
     "name": "Roy Kim",
     "url": "https://thegram.one"
