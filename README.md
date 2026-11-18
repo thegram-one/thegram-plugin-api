@@ -97,6 +97,6 @@ License: [Apache-2.0](LICENSE). [NOTICE](NOTICE) reserves the Thegram name and l
 
 ## Knowledge and managed work
 
-Version 5.0.0 shares the same skill as the OAuth plugins and the four tools `vault_query`, `vault_read`, `vault_add` and `vault_change` that replace the earlier seven. The skill is the server's short instructions (under 4,000 characters), with each op's arguments in the tool schemas and the argument to fix named in every error. Authorized AI-authored Decision/Risk knowledge keeps its actor, time and source without blanket human confirmation or an execution grant.
+Version 5.1.0 keeps the four MCP tools and existing connection settings. The optional skill routes requests to the connected server. When its schemas advertise `@guide/types`, `@guide/body` or `@guide/edit`, read only the topic needed. Earlier four-tool servers work without these references. No additional access or sign-in is required for an existing connection.
 
 Task/Event creation requires an advertised Inbox proposal capability and the person's registration. The current cloud tools expose neither, so the skill reports that limitation instead of using generic document writes or claiming a proposal was saved. This guidance does not implement the Inbox UI/API or change API-key permissions.
